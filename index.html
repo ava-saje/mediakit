@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ava Saje Media Kit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: blush-toned editorial media kit (Pinterest style): one hue family, soft serif name, tracked caps labels, stat rows with dividers */
+:root {
+  --bg: #f6ecec;
+  --card: #fdf8f7;
+  --ink: #3d2b31;
+  --muted: #8b757b;
+  --rose: #b77f8b;
+  --line: #e8d8d9;
+  --btn-fg: #fdf8f7;
+  --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --sans: "Figtree", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #1d1618; --card: #281e21; --ink: #f5e9eb; --muted: #bfa8ae; --rose: #d9a0ac; --line: #3a2d31; --btn-fg: #1d1618; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #1d1618; --card: #281e21; --ink: #f5e9eb; --muted: #bfa8ae; --rose: #d9a0ac; --line: #3a2d31; --btn-fg: #1d1618; color-scheme: dark; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--sans); font-size: 16px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding-block: 56px 72px; display: grid; gap: 56px; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 8px; }
+
+.eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--rose); }
+h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 5vw, 34px); line-height: 1.15; margin: 0; }
+.sec-head { display: grid; gap: 6px; margin-bottom: 20px; text-align: center; justify-items: center; }
+.sec-head p { margin: 0; color: var(--muted); font-size: 15px; }
+
+/* Hero */
+.hero { display: grid; justify-items: center; text-align: center; gap: 18px; }
+.portrait { width: 132px; height: 160px; border-radius: 999px 999px 24px 24px; background: var(--card); display: grid; place-items: center; overflow: hidden; border: 1px solid var(--line); }
+.portrait span { font-family: var(--serif); font-size: 34px; color: var(--rose); }
+.portrait img { width: 100%; height: 100%; object-fit: cover; }
+.hero > div:last-child { display: grid; justify-items: center; gap: 0; min-width: 0; }
+.hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(46px, 10vw, 68px); line-height: 1; margin: 10px 0 10px; letter-spacing: -.01em; }
+.tagline { margin: 0 0 16px; color: var(--muted); font-size: 16px; }
+.meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; font-size: 13px; font-weight: 500; }
+.meta span { display: inline-flex; align-items: center; gap: 5px; padding: 6px 14px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); }
+.meta svg { width: 13px; height: 13px; fill: var(--rose); flex: none; }
+.meta a { text-decoration: none; }
+
+/* Numbers */
+.platforms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.plat { background: var(--card); border-radius: 22px; padding: 22px 20px; display: grid; gap: 16px; }
+.plat-name { font-size: 11px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); text-align: center; }
+.plat-name small { display: none; }
+.kv { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.kv div { display: grid; gap: 4px; min-width: 0; text-align: center; padding: 0 4px; }
+.kv div + div { border-left: 1px solid var(--line); }
+.num { font-family: var(--serif); font-weight: 400; font-size: 28px; line-height: 1.1; font-variant-numeric: lining-nums tabular-nums; }
+.lbl { font-size: 10.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); line-height: 1.35; }
+.total { margin-top: 12px; background: var(--ink); color: var(--card); border-radius: 22px; padding: 22px; display: grid; justify-items: center; text-align: center; gap: 4px; }
+.total .num { font-size: 44px; order: -1; }
+.total .lbl { color: var(--card); opacity: .75; }
+
+/* Audience */
+.aud { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background: var(--card); border-radius: 22px; padding: 24px 12px; }
+.aud div { display: grid; gap: 4px; align-content: center; text-align: center; padding: 0 8px; min-width: 0; }
+.aud div + div { border-left: 1px solid var(--line); }
+.aud .num { font-size: 38px; }
+.aud .markets { font-family: var(--serif); font-size: 19px; line-height: 1.3; }
+
+/* Videos */
+.videos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.vid { display: grid; gap: 8px; min-width: 0; justify-items: center; }
+.frame { width: 100%; aspect-ratio: 9/16; max-width: 100%; border-radius: 18px; overflow: hidden; background: var(--card); position: relative; }
+.frame iframe { position: relative; z-index: 1; width: 100%; height: 100%; border: 0; display: block; }
+.frame .fallback { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 12px; color: var(--muted); font-size: 13px; }
+.vid a.watch { font-size: 10.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; color: var(--rose); }
+.vid a.watch:hover { color: var(--ink); }
+.placeholder .frame { display: grid; place-items: center; text-align: center; padding: 12px; border: 1px dashed var(--line); }
+.placeholder .frame p { margin: 0; color: var(--muted); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+.placeholder .frame p strong { display: block; font-family: var(--serif); font-weight: 400; color: var(--ink); font-size: 18px; letter-spacing: 0; text-transform: none; margin-bottom: 2px; }
+
+/* Proof */
+.proof { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start; }
+.shot { display: grid; gap: 10px; background: var(--card); border: 0; border-radius: 22px; padding: 12px 12px 14px; text-align: center; cursor: zoom-in; color: inherit; font: inherit; min-width: 0; }
+.shot img { width: 100%; height: auto; border-radius: 12px; display: block; }
+.shot span { font-size: 10.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.lightbox { position: fixed; inset: 0; z-index: 20; background: rgba(30, 20, 24, .82); display: grid; place-items: center;
+  padding: calc(16px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); cursor: zoom-out; }
+.lightbox img { max-height: 90vh; max-width: min(100%, 640px); border-radius: 14px; }
+
+/* Contact */
+.contact { display: grid; gap: 10px; justify-items: center; text-align: center; background: var(--card); border-radius: 28px; padding: 40px 24px; }
+.contact h2 { font-size: clamp(32px, 6vw, 40px); }
+.contact p { margin: 0; color: var(--muted); }
+.email-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 8px; }
+.btn { display: inline-flex; align-items: center; padding: 12px 24px; border-radius: 999px; font-weight: 600; font-size: 14px; letter-spacing: .04em; text-decoration: none; cursor: pointer; font-family: inherit; border: 1px solid var(--ink); }
+.btn-primary { background: var(--ink); color: var(--btn-fg); }
+.btn-ghost { background: transparent; color: var(--ink); }
+.email { font-size: 14px; color: var(--muted); user-select: all; }
+footer { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); text-align: center; }
+
+@media (max-width: 640px) {
+  .wrap { gap: 44px; padding-block: 32px 48px; }
+  .platforms { grid-template-columns: 1fr; }
+  .aud { grid-template-columns: 1fr 1fr; row-gap: 20px; }
+  .aud div:last-child { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--line); padding-top: 18px; }
+  .videos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .proof { grid-template-columns: 1fr; }
+}
+</style>
+
+</head>
+<body>
+<main class="wrap">
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="portrait" aria-label="Photo of Ava (placeholder)"><span>AS</span></div>
+    <div>
+      <div class="eyebrow">Media kit</div>
+      <h1>Ava Saje</h1>
+      <p class="tagline">Style, beauty and everyday life in London.</p>
+      <div class="meta">
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>London</span>
+        <span><a href="https://www.instagram.com/ava.saje/" target="_blank" rel="noopener">Instagram @ava.saje</a></span>
+        <span><a href="https://www.tiktok.com/@ava.saje" target="_blank" rel="noopener">TikTok @ava.saje</a></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Numbers -->
+  <section aria-labelledby="numbers-h">
+    <div class="sec-head">
+      <div class="eyebrow">Last 30 days</div>
+      <h2 id="numbers-h">The numbers</h2>
+    </div>
+    <div class="platforms">
+      <div class="plat">
+        <div class="plat-name">Instagram <small>@ava.saje</small></div>
+        <div class="kv">
+          <div><span class="num">27.8K</span><span class="lbl">Followers</span></div>
+          <div><span class="num">1.57M</span><span class="lbl">Views</span></div>
+          <div><span class="num">9.3%</span><span class="lbl">Engagement rate</span></div>
+        </div>
+      </div>
+      <div class="plat">
+        <div class="plat-name">TikTok <small>@ava.saje</small></div>
+        <div class="kv">
+          <div><span class="num">5K</span><span class="lbl">Followers</span></div>
+          <div><span class="num">651K</span><span class="lbl">Views</span></div>
+          <div><span class="num">6.3%</span><span class="lbl">Engagement rate</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="total">
+      <span class="lbl">Total monthly views across both platforms</span>
+      <span class="num">2.2M</span>
+    </div>
+  </section>
+
+  <!-- Audience -->
+  <section aria-labelledby="aud-h">
+    <div class="sec-head">
+      <div class="eyebrow">Instagram audience</div>
+      <h2 id="aud-h">Who's watching</h2>
+    </div>
+    <div class="aud">
+      <div><span class="num">98%</span><span class="lbl">Women</span></div>
+      <div><span class="num">44%</span><span class="lbl">Aged 25–44</span></div>
+      <div><span class="markets">US, UK, Australia, Canada</span><span class="lbl">Top markets</span></div>
+    </div>
+  </section>
+
+  <!-- Beauty & fashion -->
+  <section aria-labelledby="bf-h">
+    <div class="sec-head">
+      <div class="eyebrow">Content</div>
+      <h2 id="bf-h">Beauty &amp; fashion</h2>
+      <p>Outfits, colour pairings and the products I actually use.</p>
+    </div>
+    <div class="videos">
+      <div class="vid">
+        <div class="frame"><div class="fallback">Loading reel…</div><iframe src="https://www.instagram.com/reel/De45E7PoqW_/embed" title="Instagram reel 1" loading="lazy" allowfullscreen></iframe></div>
+        <a class="watch" href="https://www.instagram.com/reel/De45E7PoqW_/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
+      </div>
+      <div class="vid">
+        <div class="frame"><div class="fallback">Loading reel…</div><iframe src="https://www.instagram.com/reel/DeyvkvuIaLx/embed" title="Instagram reel 2" loading="lazy" allowfullscreen></iframe></div>
+        <a class="watch" href="https://www.instagram.com/reel/DeyvkvuIaLx/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
+      </div>
+      <div class="vid">
+        <div class="frame"><div class="fallback">Loading reel…</div><iframe src="https://www.instagram.com/reel/Dd19ZlVsdQ6/embed" title="Instagram reel 3" loading="lazy" allowfullscreen></iframe></div>
+        <a class="watch" href="https://www.instagram.com/reel/Dd19ZlVsdQ6/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
+      </div>
+      <div class="vid">
+        <div class="frame"><div class="fallback">Loading reel…</div><iframe src="https://www.instagram.com/reel/DeXAtY1o6rs/embed" title="Instagram reel 4" loading="lazy" allowfullscreen></iframe></div>
+        <a class="watch" href="https://www.instagram.com/reel/DeXAtY1o6rs/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trends & sister -->
+  <section aria-labelledby="ts-h">
+    <div class="sec-head">
+      <div class="eyebrow">More content</div>
+      <h2 id="ts-h">Trends &amp; with my sister</h2>
+      <p>Trending formats and the videos I film with my sister.</p>
+    </div>
+    <div class="videos">
+      <div class="vid placeholder"><div class="frame"><p><strong>Trend video</strong>Coming soon</p></div></div>
+      <div class="vid placeholder"><div class="frame"><p><strong>Trend video</strong>Coming soon</p></div></div>
+      <div class="vid placeholder"><div class="frame"><p><strong>With my sister</strong>Coming soon</p></div></div>
+      <div class="vid placeholder"><div class="frame"><p><strong>With my sister</strong>Coming soon</p></div></div>
+    </div>
+  </section>
+
+  <!-- Proof -->
+  <section aria-labelledby="proof-h">
+    <div class="sec-head">
+      <div class="eyebrow">Straight from the apps · Oct 2026</div>
+      <h2 id="proof-h">Insights</h2>
+      <p>Tap any screenshot to see it full size.</p>
+    </div>
+    <div class="proof">
+      <button class="shot" type="button" data-full="assets/ig-overview.jpg"><img src="assets/ig-overview.jpg" alt="Instagram insights: 1,567,934 views in 30 days"><span>Instagram · 30 days</span></button>
+      <button class="shot" type="button" data-full="assets/tt-overview.jpg"><img src="assets/tt-overview.jpg" alt="TikTok analytics: 650.8K post views in 28 days"><span>TikTok · 28 days</span></button>
+      <button class="shot" type="button" data-full="assets/ig-age-gender.jpg"><img src="assets/ig-age-gender.jpg" alt="Instagram audience: 97.7% women, age ranges"><span>Instagram · gender &amp; age</span></button>
+      <button class="shot" type="button" data-full="assets/ig-countries.jpg"><img src="assets/ig-countries.jpg" alt="Instagram audience top countries"><span>Instagram · top countries</span></button>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" aria-labelledby="contact-h">
+    <div class="eyebrow">Collaborations</div>
+    <h2 id="contact-h">Let's work together</h2>
+    <p>For partnerships, gifting and campaigns, email me directly.</p>
+    <div class="email-row">
+      <a class="btn btn-primary" href="mailto:theavasaje@gmail.com">Email me</a>
+      <button class="btn btn-ghost" type="button" id="copy-email">Copy email</button>
+    </div>
+    <span class="email">theavasaje@gmail.com</span>
+  </section>
+
+  <footer>Stats updated October 2026.</footer>
+</main>
+
+<div class="lightbox" id="lightbox" hidden><img id="lightbox-img" alt=""></div>
+
+<script>
+(function () {
+  var lb = document.getElementById('lightbox'), lbImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('.shot').forEach(function (b) {
+    b.addEventListener('click', function () {
+      lbImg.src = b.dataset.full; lbImg.alt = b.querySelector('img').alt; lb.hidden = false;
+    });
+  });
+  lb.addEventListener('click', function () { lb.hidden = true; });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lb.hidden = true; });
+
+  var copyBtn = document.getElementById('copy-email');
+  copyBtn.addEventListener('click', function () {
+    var email = 'theavasaje@gmail.com';
+    var done = function () { copyBtn.textContent = 'Copied'; setTimeout(function () { copyBtn.textContent = 'Copy email'; }, 1800); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).then(done, function () { selectEmail(); });
+    } else { selectEmail(); }
+  });
+  function selectEmail() {
+    var el = document.querySelector('.email'), r = document.createRange();
+    r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+  }
+})();
+</script>
+</body>
+</html>
